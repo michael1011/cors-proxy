@@ -1,0 +1,10 @@
+name = "cors-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-05-05"
+
+# Restrict which hosts the proxy will fetch. Comma-separated.
+# Entries are either exact hosts ("api.example.com") or subdomain wildcards
+# ("*.example.com", which matches subdomains but not the apex).
+# Unset / empty = allow all hosts (open proxy).
+# [vars]
+# ALLOWED_HOSTS = "api.example.com,*.googleapis.com"
