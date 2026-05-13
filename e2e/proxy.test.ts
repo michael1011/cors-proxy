@@ -80,12 +80,13 @@ beforeAll(async () => {
     ],
     {
       stdout: debug ? 'inherit' : 'ignore',
-      stderr: debug ? 'inherit' : 'ignore',
+      stderr: 'inherit',
+      env: { ...process.env, WRANGLER_SEND_METRICS: 'false' },
     },
   );
 
-  await waitForProxy(45_000);
-}, 60_000);
+  await waitForProxy(90_000);
+}, 120_000);
 
 afterAll(async () => {
   if (wrangler) {
